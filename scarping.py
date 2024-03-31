@@ -28,8 +28,9 @@ def on_data(data: EventData):
     }
 
     write_csv(
-        data,
-        './data/result.csv',
+        data=data,
+        filename='./data/result.csv',
+        field_names=list(data.keys())
     )
 
 
